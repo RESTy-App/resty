@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import History from '../components/History';
+import Form from '../components/Form';
 
 export default class Main extends Component {
   state = {
-    history: []
+    history: [],
+    url: '',
+    method: ''
   };
 
   static propTypes = {
@@ -15,12 +18,27 @@ export default class Main extends Component {
       url: PropTypes.string.isRequired
     })).isRequired
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const { url } = this.state.url;
+    const { method } = this.state.method;
+    this.setState(state => {
+      return {
+        history: [{ url: url, method: method }, ...state.history],
+      };
+    });
+  }
   
   render() {
     return (
       <>
         <Header title={'RESTy'} />
         <History history={this.state.history} />
+        <Form 
+          url={this.state.url}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit} />
       </>
     );
   }
