@@ -19,6 +19,10 @@ export default class Main extends Component {
     })).isRequired
   }
 
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     const { url } = this.state.url;
