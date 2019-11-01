@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ route, url }) => {
+const Card = ({ method, url }) => {
   return (
     <div>
-      <h3>{route}</h3>
+      <h3>{method}</h3>
       <p>{url}</p>
     </div>
   );
 };
 
 Card.propTypes = {
-  route: PropTypes.string.isRequired,
+  method: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 };
 
