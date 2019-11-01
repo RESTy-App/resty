@@ -13,9 +13,12 @@ const History = ({ history }) => {
   });
 
   return (
-    <ul>
-      {cards}
-    </ul>
+    <>
+      <h2>History</h2>
+      <ul>
+        {cards}
+      </ul>
+    </>
   );
 
 };
