@@ -8,6 +8,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
         <div>
           <input
             type="text"
+            value={url}
             placeholder="URL"
             onChange={handleChange} />
         </div>
@@ -22,7 +23,9 @@ const Form = ({ url, handleSubmit, handleChange }) => {
         </div>
 
         <div>
-          <input type="text" />
+          <input 
+            type="text" 
+            placeholder="Raw JSON Body"/>
         </div>
       </form>
     </>
