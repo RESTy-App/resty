@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
-      <section>
+      <section className='deck'>
         <form onSubmit={handleSubmit}>
           <section>
             <input
@@ -45,11 +45,15 @@ const Form = ({ url, handleSubmit, handleChange }) => {
               <button type="submit">Go!</button>
             </label>
 
-            <div>
-              <textarea
-                type="text"
-                placeholder="Raw JSON Body" />
-            </div>
+            <section className='deck col-2'>
+              <div>
+                <textarea
+                  type="text"
+                  placeholder="Raw JSON Body"
+                  name="requestBody">
+                </textarea>
+              </div>
+            </section>
           </div>
 
         </form>

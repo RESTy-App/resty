@@ -15,7 +15,7 @@ const History = ({ history }) => {
   return (
     <>
       <h2>History</h2>
-      <ul>
+      <ul id='history'>
         {cards}
       </ul>
     </>
