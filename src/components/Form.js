@@ -7,6 +7,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
       <form onSubmit={handleSubmit}>
         <div>
           <input
+            name="url"
             type="text"
             value={url}
             placeholder="URL"
@@ -14,11 +15,11 @@ const Form = ({ url, handleSubmit, handleChange }) => {
         </div>
 
         <div>
-          <button>GET</button>
-          <button>POST</button>
-          <button>PUT</button>
-          <button>PATCH</button>
-          <button>DELETE</button>
+          <button name="method">GET</button>
+          <button name="method">POST</button>
+          <button name="method">PUT</button>
+          <button name="method">PATCH</button>
+          <button name="method">DELETE</button>
           <button>Go!</button>
         </div>
 
