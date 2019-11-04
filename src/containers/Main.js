@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import History from '../components/History';
 import Form from '../components/Form';
+import apiCall from '../../services/api-call';
 
 export default class Main extends Component {
   state = {
     history: [],
+    data: [],
     url: '',
     method: ''
   };
@@ -23,11 +25,11 @@ export default class Main extends Component {
     event.preventDefault();
     const { url } = this.state.url;
     const { method } = this.state.method;
-    this.setState(state => {
-      return {
-        history: [{ url: url, method: method }, ...state.history],
-      };
-    });
+    apiCall(this.state.url, this.state.name)
+      .then(result => {
+        this.setState({ data: result });
+        this.setState(state => ({ history: [{ url: url, method: method }, ...state.history] }));
+      });
   }
   
   render() {
