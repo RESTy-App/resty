@@ -14,10 +14,12 @@ const History = ({ history }) => {
 
   return (
     <>
-      <h2>History</h2>
-      <ul id='history'>
-        {cards}
-      </ul>
+      <aside>
+        <h2>History</h2>
+        <ul id="history">
+          {cards}
+        </ul>
+      </aside>
     </>
   );
 
