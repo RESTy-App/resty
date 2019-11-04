@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
-      <section className='deck'>
+      <section>
         <form onSubmit={handleSubmit}>
           <section>
             <input
               name="url"
+              className="wide"
               type="text"
               value={url}
               placeholder="URL"
@@ -45,7 +46,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
               <button type="submit">Go!</button>
             </label>
 
-            <section className='deck col-2'>
+            <section>
               <div>
                 <textarea
                   type="text"
