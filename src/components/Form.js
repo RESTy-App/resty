@@ -4,31 +4,56 @@ import PropTypes from 'prop-types';
 const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            name="url"
-            type="text"
-            value={url}
-            placeholder="URL"
-            onChange={handleChange} />
-        </div>
+      <section>
+        <form onSubmit={handleSubmit}>
+          <section>
+            <input
+              name="url"
+              type="text"
+              value={url}
+              placeholder="URL"
+              onChange={handleChange} />
+          </section>
 
-        <div>
-          <button name="method">GET</button>
-          <button name="method">POST</button>
-          <button name="method">PUT</button>
-          <button name="method">PATCH</button>
-          <button name="method">DELETE</button>
-          <button>Go!</button>
-        </div>
+          <div>
+            <label>
+              <input type="radio" name="method" value="get" />
+              <span>GET</span>
+            </label>
 
-        <div>
-          <input 
-            type="text" 
-            placeholder="Raw JSON Body"/>
-        </div>
-      </form>
+            <label>
+              <input type="radio" name="method" value="post" />
+              <span>POST</span>
+            </label>
+
+            <label>
+              <input type="radio" name="method" value="put" />
+              <span>PUT</span>
+            </label>
+
+            <label>
+              <input type="radio" name="method" value="patch" />
+              <span>PATCH</span>
+            </label>
+
+            <label>
+              <input type="radio" name="method" value="delete" />
+              <span>DELETE</span>
+            </label>
+
+            <label>
+              <button type="submit">Go!</button>
+            </label>
+
+            <div>
+              <textarea
+                type="text"
+                placeholder="Raw JSON Body" />
+            </div>
+          </div>
+
+        </form>
+      </section>
     </>
   );
 };

@@ -8,7 +8,8 @@ export default class Main extends Component {
   state = {
     history: [],
     url: '',
-    method: ''
+    method: '',
+    json: ''
   };
 
   static propTypes = {
