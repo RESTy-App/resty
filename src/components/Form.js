@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Form.css';
 
 const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
-      <section>
-        <form onSubmit={handleSubmit}>
-          <section>
-            <input
-              name="url"
-              className="wide"
-              type="text"
-              value={url}
-              placeholder="URL"
-              onChange={handleChange} />
-          </section>
+      <form onSubmit={handleSubmit} className={styles.Form}>
+        <section className={styles.Url}>
+          <input
+            name="url"
+            className="wide"
+            type="text"
+            value={url}
+            placeholder="URL"
+            onChange={handleChange} />
 
-          <div>
+          <div className={styles.Label}>
             <label>
               <input type="radio" name="method" value="get" onChange={handleChange} />
               <span>GET</span>
@@ -46,19 +45,17 @@ const Form = ({ url, handleSubmit, handleChange }) => {
               <button type="submit">Go!</button>
             </label>
 
-            <section>
-              <div>
-                <textarea
-                  type="text"
-                  placeholder="Raw JSON Body"
-                  name="requestBody">
-                </textarea>
-              </div>
-            </section>
+            <div className={styles.Json}>
+              <textarea
+                type="text"
+                placeholder="Raw JSON Body"
+                name="requestBody">
+              </textarea>
+            </div>
           </div>
 
-        </form>
-      </section>
+        </section>
+      </form>
     </>
   );
 };
