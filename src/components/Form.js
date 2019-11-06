@@ -1,44 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Form.css';
 
 const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
-      <section>
-        <form onSubmit={handleSubmit}>
-          <section>
-            <input
-              name="url"
-              className="wide"
-              type="text"
-              value={url}
-              placeholder="URL"
-              onChange={handleChange} />
-          </section>
+      <form onSubmit={handleSubmit} className={styles.Form}>
+        <section className={styles.Url}>
+          <input
+            name="url"
+            className="wide"
+            type="text"
+            value={url}
+            placeholder="URL"
+            onChange={handleChange} />
 
-          <div>
+          <div className={styles.Label}>
             <label>
-              <input type="radio" name="method" value="get" />
+              <input type="radio" name="methods" value="get" />
               <span>GET</span>
             </label>
 
             <label>
-              <input type="radio" name="method" value="post" />
+              <input type="radio" name="methods" value="post" />
               <span>POST</span>
             </label>
 
             <label>
-              <input type="radio" name="method" value="put" />
+              <input type="radio" name="methods" value="put" />
               <span>PUT</span>
             </label>
 
             <label>
-              <input type="radio" name="method" value="patch" />
+              <input type="radio" name="methods" value="patch" />
               <span>PATCH</span>
             </label>
 
             <label>
-              <input type="radio" name="method" value="delete" />
+              <input type="radio" name="methods" value="delete" />
               <span>DELETE</span>
             </label>
 
@@ -46,19 +45,17 @@ const Form = ({ url, handleSubmit, handleChange }) => {
               <button type="submit">Go!</button>
             </label>
 
-            <section>
-              <div>
-                <textarea
-                  type="text"
-                  placeholder="Raw JSON Body"
-                  name="requestBody">
-                </textarea>
-              </div>
-            </section>
+            <div className={styles.Json}>
+              <textarea
+                type="text"
+                placeholder="Raw JSON Body"
+                name="requestBody">
+              </textarea>
+            </div>
           </div>
 
-        </form>
-      </section>
+        </section>
+      </form>
     </>
   );
 };
