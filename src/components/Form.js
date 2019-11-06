@@ -17,27 +17,27 @@ const Form = ({ url, handleSubmit, handleChange }) => {
 
           <div className={styles.Label}>
             <label>
-              <input type="radio" name="methods" value="get" />
+              <input type="radio" name="method" value="get" onChange={handleChange} />
               <span>GET</span>
             </label>
 
             <label>
-              <input type="radio" name="methods" value="post" />
+              <input type="radio" name="method" value="post" onChange={handleChange}/>
               <span>POST</span>
             </label>
 
             <label>
-              <input type="radio" name="methods" value="put" />
+              <input type="radio" name="method" value="put" onChange={handleChange}/>
               <span>PUT</span>
             </label>
 
             <label>
-              <input type="radio" name="methods" value="patch" />
+              <input type="radio" name="method" value="patch" onChange={handleChange}/>
               <span>PATCH</span>
             </label>
 
             <label>
-              <input type="radio" name="methods" value="delete" />
+              <input type="radio" name="method" value="delete" onChange={handleChange}/>
               <span>DELETE</span>
             </label>
 
