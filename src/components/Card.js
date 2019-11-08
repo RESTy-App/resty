@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Card.css';
 
 const Card = ({ method, url }) => {
   return (
-    <div>
+    <div className={styles.Card}>
       <h3>{method}</h3>
       <p>{url}</p>
     </div>

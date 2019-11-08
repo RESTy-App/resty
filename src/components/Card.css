@@ -1,0 +1,15 @@
+.Card {
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+}
