@@ -6,7 +6,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.Form}>
-        <section className={styles.Url}>
+        <section>
           <input
             name="url"
             className="wide"
@@ -15,7 +15,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
             placeholder="URL"
             onChange={handleChange} />
 
-          <div className={styles.Label}>
+          <div id='label'>
             <label>
               <input type="radio" name="methods" value="get" />
               <span>GET</span>
@@ -45,7 +45,7 @@ const Form = ({ url, handleSubmit, handleChange }) => {
               <button type="submit">Go!</button>
             </label>
 
-            <div className={styles.Json}>
+            <div id='json'>
               <textarea
                 type="text"
                 placeholder="Raw JSON Body"
