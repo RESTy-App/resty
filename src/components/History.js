@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import styles from './History.css';
 
 const History = ({ history }) => {
 
@@ -14,10 +15,14 @@ const History = ({ history }) => {
 
   return (
     <>
-      <h2>History</h2>
-      <ul>
-        {cards}
-      </ul>
+      <section>
+        <aside className={styles.History}>
+          <h2>History</h2>
+          <ul id="history">
+            {cards}
+          </ul>
+        </aside>
+      </section>
     </>
   );
 

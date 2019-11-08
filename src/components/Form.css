@@ -1,0 +1,49 @@
+.Form {
+  display: flex;
+  flex-direction: row;
+
+  input {
+    width: 90%;
+    margin: 1em;
+  }
+
+  #label {
+    padding: 0.25em 0.5em;
+  }
+
+  label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1em;
+  }
+
+  label input {
+    display: none;
+  }
+
+  #json {
+    background: #030202;
+    border: 1px solid #ccc;
+    flex: 1;
+    flex-basis:0;
+    overflow: auto;
+    padding: 1em;
+  }
+
+  textarea {
+    margin: 2em;
+    height: 10em;
+    background-color: white;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    width: 80%;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: inline-block;
+    text-align: start;
+  }
+}

@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import History from '../components/History';
 import Form from '../components/Form';
-import apiCall from '../../services/api-call';
+import { apiCall } from '../../services/api-call';
 
 export default class Main extends Component {
   state = {
     history: [],
     data: [],
     url: '',
-    method: ''
+    method: '',
+    json: ''
   };
 
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     history: PropTypes.arrayOf(PropTypes.shape({
       method: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired
@@ -27,8 +28,7 @@ export default class Main extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { url } = this.state.url;
-    const { method } = this.state.method;
+    const { url, method } = this.state;
     apiCall(this.state.url, this.state.name)
       .then(result => {
         this.setState({ data: result });
