@@ -1,39 +1,35 @@
 .Form {
   display: flex;
   flex-direction: row;
-}
 
-.Url {
   input {
     width: 90%;
     margin: 1em;
   }
-}
 
-.Label {
-  padding: 0.25em 0.5em;
+  #label {
+    padding: 0.25em 0.5em;
+  }
 
   label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding: 1em;
-
-    input {
-      display: none;
-    }
   }
-}
 
-#json {
-  background: #030202;
-  border: 1px solid #ccc;
-  flex: 1;
-  flex-basis:0;
-  overflow: auto;
-  padding: 1em;
-}
+  label input {
+    display: none;
+  }
 
-.Json {
+  #json {
+    background: #030202;
+    border: 1px solid #ccc;
+    flex: 1;
+    flex-basis:0;
+    overflow: auto;
+    padding: 1em;
+  }
+
   textarea {
     margin: 2em;
     height: 10em;
