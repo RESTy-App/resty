@@ -1,0 +1,25 @@
+.Display {
+  margin: 1em;
+
+  pre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .7em;
+    line-height: 1.2em;
+    overflow: auto;
+    background: white;
+    color: dimgray;
+    height: 30em;
+    background-color: white;
+    padding: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-image: initial;
+    width: 90%;
+    cursor: pointer;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: inline-block;
+    text-align: start;
+  }
+}

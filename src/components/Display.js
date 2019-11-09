@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Display.css';
 
 const Display = ({ data }) => {
   console.log('***DATA', data);
   
   return (
     
-    <div>
-      <pre>{JSON.stringify(data)}</pre>
+    <div className={styles.Display}>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
 };
