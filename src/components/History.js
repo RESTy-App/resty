@@ -30,7 +30,7 @@ const History = ({ history }) => {
 
 History.propTypes = {
   history: PropTypes.arrayOf(PropTypes.shape({
-    route: PropTypes.string.isRequired,
+    method: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   })).isRequired
 };
