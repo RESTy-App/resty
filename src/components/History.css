@@ -6,17 +6,34 @@
   h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    margin-left: 1em;
-    margin-top: .5em;
+    margin: 1em;
   }
 
   ul {
     color: black;
     cursor: pointer;
     font-size: 0.75em;
-    margin-bottom: 0.5em;
+    margin: 1em;
     padding: 0.33em;
     height: 80%;
     width: 20%;
+  }
+
+  li {
+    border: 1px groove #ccc;
+    color: #eee;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: .75em;
+    padding: .75em;
+    border-radius: 3px;
+    background: #2d5986;
+    width: 250px;
+    margin-bottom: .5em;
+  }
+
+  span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 }
