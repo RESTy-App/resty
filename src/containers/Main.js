@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import History from '../components/History';
 import Form from '../components/Form';
+import Display from '../components/Display';
 import { apiCall } from '../../services/api-call';
 import './Main.css';
 
@@ -30,10 +31,12 @@ export default class Main extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { url, method } = this.state;
+    console.log('URL', url);
+    console.log('METHOD', method);
+    
     apiCall(this.state.url, this.state.name)
       .then(result => {
-        this.setState({ data: result });
-        this.setState(state => ({ history: [{ url: url, method: method }, ...state.history] }));
+        this.setState(state => ({ history: [{ url: url, method: method }, ...state.history], data: result }));
       });
   }
 
@@ -47,6 +50,7 @@ export default class Main extends Component {
             url={this.state.url}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit} />
+          <Display data={this.state.data} />
         </section>
       </>
     );
